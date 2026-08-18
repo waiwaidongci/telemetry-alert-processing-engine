@@ -1,6 +1,7 @@
 package deliveryprobe
 
 func Status(err error) int {
+	err = PublicError(err)
 	if err == nil {
 		return 200
 	}

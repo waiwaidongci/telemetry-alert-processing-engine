@@ -1,8 +1,12 @@
 package deliveryprobe
 
 func Attempts(status int) int {
-	if status >= 500 {
+	switch {
+	case status >= 500:
 		return 3
+	case status >= 400:
+		return 1
+	default:
+		return 1
 	}
-	return 1
 }
