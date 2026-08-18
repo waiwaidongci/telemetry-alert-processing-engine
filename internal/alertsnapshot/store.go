@@ -1,0 +1,12 @@
+package alertsnapshot
+
+import "sync"
+
+type Store struct {
+	mu     sync.RWMutex
+	values map[string]int
+}
+
+func New() *Store                         { return &Store{values: map[string]int{"open": 1}} }
+func (s *Store) Snapshot() map[string]int { return s.values }
+func (s *Store) Set(k string, v int)      { s.mu.Lock(); defer s.mu.Unlock(); s.values[k] = v }
