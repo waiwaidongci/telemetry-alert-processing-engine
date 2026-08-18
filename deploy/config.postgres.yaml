@@ -1,0 +1,12 @@
+server:
+  addr: ":8080"
+
+database:
+  driver: postgres
+  postgres_dsn: "postgres://telemetry:telemetry@localhost:5432/telemetry?sslmode=disable"
+  max_open_conns: 20
+  max_idle_conns: 10
+  conn_max_lifetime: 30m
+
+logging:
+  level: info
