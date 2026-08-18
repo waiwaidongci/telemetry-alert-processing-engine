@@ -1,3 +1,3 @@
 package routingconfig
 
-func DefaultValidator() Validator { return Disabled() }
+func DefaultValidator() Validator { return &required{} }
