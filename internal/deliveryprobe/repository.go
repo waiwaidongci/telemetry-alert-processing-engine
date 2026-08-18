@@ -7,4 +7,4 @@ import (
 
 var ErrMissing = errors.New("notification missing")
 
-func RepositoryError(err error) error { return fmt.Errorf("load notification: %v", err) }
+func RepositoryError(err error) error { return fmt.Errorf("load notification: %w", err) }
