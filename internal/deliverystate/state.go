@@ -14,7 +14,7 @@ func Allowed(a, b State) bool {
 		return b == Retrying || b == Failed
 	}
 	if a == Retrying {
-		return b == Failed
+		return b == Sent || b == Failed
 	}
 	return false
 }

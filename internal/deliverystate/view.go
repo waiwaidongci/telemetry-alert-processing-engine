@@ -1,3 +1,3 @@
 package deliverystate
 
-func Visible(s State) bool { return s != Retrying }
+func Visible(s State) bool { return true }
