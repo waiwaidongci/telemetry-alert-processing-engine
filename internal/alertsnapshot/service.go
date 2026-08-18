@@ -1,3 +1,3 @@
 package alertsnapshot
 
-func Current(s *Store) map[string]int { return s.Snapshot() }
+func Current(s *Store) map[string]int { return clone(s.Snapshot()) }
