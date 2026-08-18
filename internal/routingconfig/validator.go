@@ -9,4 +9,4 @@ func (v *required) Valid(s string) bool {
 	}
 	return s != ""
 }
-func Disabled() Validator { var v *required; return v }
+func Disabled() Validator { return &required{} }
