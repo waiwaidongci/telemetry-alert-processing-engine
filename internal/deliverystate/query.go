@@ -1,3 +1,3 @@
 package deliverystate
 
-func Active(s State) bool { return s == Queued || s == Retrying }
+func Active(s State) bool { return s == Queued }
